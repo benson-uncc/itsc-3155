@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- This line creats a text box for the user to enter there name and puts a placeholder in the box that say "enter your name" -->
+        <input id="name-input" type="text" placeholder="Enter your name" />
+        <!--This line creates a button that says click me-->
+        <button id="my-button">Click Me</button>
+
+        <script>
+            // This line creates the variable my button and gives it the value of the button created in html above
+            var myButton = document.querySelector('#my-button');
+            //This lien creates the variable nameInput and assignes it to what is inputed into the text box
+            var nameInput = document.querySelector('#name-input');
+
+            // the add event listener method is a method used when responding to an event that happened
+            // on a webpage like when you click on a button. What its doing is saying when the button is 
+            // clicked it goes and does if the nameInput value is not empty then give the user a statement
+            //saying hello plus there name which is stored in the nameInput variable
+            myButton.addEventListener('click', function () {
+                if (nameInput.value !== '') {
+                    alert('Hello ' + nameInput.value);
+    }
+  });
+</script>
+    </body>
+</html>

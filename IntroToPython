@@ -1,0 +1,45 @@
+def string_both_ends(str):
+    if len(str) < 2:
+        return " "
+    return str[0:2] + str[-2:]
+
+name = input("enter your string: ")
+print(string_both_ends(name))
+
+def pr2():
+    num1 = int(input("Enter your first number: "))
+    num2 = int(input("Enter your second number: "))
+    sequence = range(num1, num2)
+    for n in sequence:
+        if(n % 7 == 0):
+            if(n%5 != 0):
+                print(n)
+
+pr2()
+
+def pr3(dict1, dict2):
+    for point in dict2:
+        if point in dict1:
+            dict2[point] = dict2[point] + dict1[point] 
+        f_dict = {**dict1, **dict2}
+    print(f_dict)
+
+name = {'a': 100, 'b': 200, 'c': 300}
+number = {'a': 300, 'b': 200, 'd': 400}
+pr3(name, number)
+
+def pr4():
+    print("Enter the number of items: ")
+    numItems = int(input())
+    index = 0
+    dictionary = {}
+    while(index < numItems):
+        fruit, price = input("Enter a item and price: ").split()
+        
+        dictionary.update({fruit: price})
+        
+        index = index + 1
+    for key, value in dictionary.items():
+        print(key, ' : ', value)
+
+pr4()
